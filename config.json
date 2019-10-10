@@ -1,0 +1,55 @@
+{
+  "base_url": "https://www.instagram.com/accounts/login/",
+  "search_url": "https://www.instagram.com/explore/tags/",
+  "username": "badiiboutar@yahoo.com",
+  "password": "veganBitch666",
+  "comment_contents": [
+    "I really liked your post! 🥥 🥗 ❤ 💚 💙 🥗 🥥 🥥 keep it up! ✌✌",
+    "I really liked that! 🥥 🥗  💙 🥗 🥥 keep it up! ✌✌",
+    "forever 🌱 🌱 💪 !",
+    "This deserves an applause 👏👏"
+  ],
+  "hashTags": [
+    "veganbowl",
+    "veganbowls",
+    "whatveganeat",
+    "eatmoreplants",
+    "vegansalad",
+    "lazyvegan",
+    "feedfeedvegan",
+    "veganbreakfast",
+    "veganmealideas",
+    "veganmeal",
+    "veganfoodspot"
+  ],
+  "settings": {
+    "run_every_x_hours": 3,
+    "like_ratio": 0.75,
+    "daily_max_actions": 1440,
+    "hourly_max_actions": 60,
+    "hourly_max_likes": 30,
+    "hourly_max_follows": 30,
+    "hourly_max_comments": 30,
+    "follow_ratio": 0.25,
+    "unfollow_after_days": 2,
+    "headless": false
+  },
+  "selectors": {
+    "home_to_login_button": ".izU2O a",
+    "username_field": "input[type=\"text\"]",
+    "password_field": "input[type=\"password\"]",
+    "comment_field": "form.X7cDz > textarea.Ypffh",
+    "comment_confirm_button": "form.X7cDz > button[type=\"submit\"]",
+    "login_button": "button[type=\"submit\"]",
+    "post_heart_grey": "span.glyphsSpriteHeart__outline__24__grey_9",
+    "post_username": "div.e1e1d > h2.BrX75 > a",
+    "post_follow_link": ".bY2yH > button",
+    "post_like_button": "span.fr66n > button",
+    "post_follow_button": "span.oW_lN._1OSdk > button",
+    "post_close_button": "button.ckWGn",
+    "user_unfollow_button": "span.vBF20 > button._5f5mN",
+    "user_unfollow_confirm_button": "div.mt3GC > button.aOOlW.-Cab_",
+    "not_now_button": ".HoLwm",
+    "hash_tags_base_class": ".EZdmt"
+  }
+}
