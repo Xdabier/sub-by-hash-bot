@@ -7,9 +7,16 @@
     "I really liked your post! 🥥 🥗 ❤ 💚 💙 🥗 🥥 🥥 keep it up! ✌✌",
     "I really liked that! 🥥 🥗  💙 🥗 🥥 keep it up! ✌✌",
     "forever 🌱 🌱 💪 !",
-    "This deserves an applause 👏👏"
+    "This deserves an applause 👏👏",
+    "This picture made my day! ����",
+    "Very nice! �� really loved that! �� ❤ "
   ],
   "hashTags": [
+    "healthyfood",
+    "healthylifestyle",
+    "vegan",
+    "glutenfree",
+    "veganfood",
     "veganbowl",
     "veganbowls",
     "whatveganeat",
@@ -23,7 +30,7 @@
     "veganfoodspot"
   ],
   "settings": {
-    "run_every_x_hours": 3,
+    "run_every_x_hours": 1.5,
     "like_ratio": 0.75,
     "daily_max_actions": 1440,
     "hourly_max_actions": 60,

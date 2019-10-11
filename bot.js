@@ -1,4 +1,4 @@
-const puppeteer = require('puppeteer'),
+const puppeteer = require('puppeteer-core'),
     config = require('./config'),
     shuffle = require('shuffle-array');
 
@@ -49,6 +49,7 @@ async function fetchInstagram() {
 
     if (totalActions < config.settings.daily_max_actions) {
         const browser = await puppeteer.launch({
+	    executablePath: 'chromium-browser',
             headless: true,
             args: ['--no-sandbox']
         });
@@ -169,7 +170,9 @@ async function fetchInstagram() {
                         console.log('totalActions = ', totalActions, 'daily limit = ', config.settings.daily_max_actions);
 
                         if (totalActions >= config.settings.daily_max_actions - 20 || !canYouThisHour) {
-                            return 'hitting limit! I\'m having a pause! buuut I\'m still working baby! 😁😁😁😁😁😁😁'
+                            return 'hitting limit! I\'m having a pause! buuut I\'m still working baby! 😁😁😁😁😁😁😁 \n we did ' 
+					+ likesCount + ' likes & ' + commentsCount + ' comments & ' + followsCount + ' follows! \n total actions for now = ' 
+					+ totalActions + '\n our daily limit = ' + config.settings.daily_max_actions;
                         }
                         // closing post
                         await page.click(config.selectors.post_close_button).catch(() => console.log(':::> Error closing post'));
