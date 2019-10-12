@@ -14,7 +14,7 @@
     "nodemailer": "^6.3.0",
     "pouchdb": "^7.1.1",
     "pouchdb-find": "^7.1.1",
-    "puppeteer": "^1.20.0",
+    "puppeteer-core": "^1.20.0",
     "shuffle-array": "^1.0.1"
   }
 }
