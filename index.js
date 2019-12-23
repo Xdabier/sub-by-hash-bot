@@ -2,10 +2,7 @@ const bot = require('./bot');
 const cnf = require('./config');
 const nodemailer = require('nodemailer');
 
-// async..await is not allowed in global scope, must use a wrapper
 async function sendMail(users) {
-    // Generate test SMTP service account from ethereal.email
-    // Only needed if you don't have a real mail account for testing
     let testAccount = await nodemailer.createTestAccount();
     const renderList = () => {
         let string = '';
@@ -15,21 +12,21 @@ async function sendMail(users) {
 
         return string;
     };
-    // create reusable transporter object using the default SMTP transport
+
     let transporter = nodemailer.createTransport({
-        host: "ssl0.ovh.net",
+        host: "youremail.host.net",
         port: 587,
         secure: false,
         auth: {
-            user: "badii@xdabier.com",
-            pass: "badet@123"
+            user: "your@email.com",
+            pass: "youremailpassw0rd"
         }
     });
 
     // send mail with defined transport object
     let info = await transporter.sendMail({
-        from: '"Mohsen Instagram 👳‍ 👻" <badii@xdabier.com>', // sender address
-        to: 'hello@vegabowl.com, ingrid.garcia.jones@gmail.com, rami.mestiri.ept@gmail.com, hello@bags', // list of receivers
+        from: '"Mohsen Instagram 👳‍ 👻" <your@email.com>', // sender address
+        to: 'your@otheremail.com', // list of receivers
         subject: 'Rapport Mohsen', // Subject line
         html: `
         <h1>Mohsen Instagram RETURN!</h1>
@@ -40,13 +37,6 @@ async function sendMail(users) {
         </h3>
         ` // html body
     });
-
-    console.log('Message sent: %s', info.messageId);
-    // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-
-    // Preview only available when sending through an Ethereal account
-    console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-    // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
 }
 
 
